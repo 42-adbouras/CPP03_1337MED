@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 17:43:43 by adbouras          #+#    #+#              #
-#    Updated: 2024/11/06 09:35:02 by adbouras         ###   ########.fr        #
+#    Updated: 2024/11/19 08:42:34 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,11 @@ CC		= c++
 
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-NAME	= clapTrap
+NAME	= scravTrap
 
-SRC		= ClapTrap.cpp main.cpp
+SRC		= ClapTrap.cpp main.cpp ScavTrap.cpp
 
-NCLD	= ClapTrap.hpp
+NCLD	= ClapTrap.hpp ScavTrap.hpp
 
 OBJ_DIR = objects/
 

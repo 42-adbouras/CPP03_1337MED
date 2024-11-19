@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 16:49:47 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/18 18:58:55 by adbouras         ###   ########.fr       */
+/*   Created: 2024/11/12 12:00:58 by adbouras          #+#    #+#             */
+/*   Updated: 2024/11/19 11:15:54 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "ClapTrap.hpp"
 
-int	main( void ) {
+class ScavTrap : public ClapTrap
+{
+public:
+	ScavTrap	( void );
+	ScavTrap	( str name );
+	ScavTrap	( const ScavTrap& right );
+	~ScavTrap	( void );
 
-	ClapTrap	a("Adam");
+	ScavTrap&	operator=( const ScavTrap& right );
 
-	a.attack("Evaluator");
-	a.takeDamage(9);
-	a.beRepaired(11);
-	
-}
+	void		attack( const std::string& target );
+	void		guardGate( void );
+};

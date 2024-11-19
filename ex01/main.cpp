@@ -6,18 +6,16 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:49:47 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/18 18:58:55 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:53:10 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main( void ) {
 
-	ClapTrap	a("Adam");
-
+	ScavTrap	a("RD-40");
 	a.attack("Evaluator");
-	a.takeDamage(9);
-	a.beRepaired(11);
-	
+	a.takeDamage(300);
+	a.takeDamage(300);	
 }

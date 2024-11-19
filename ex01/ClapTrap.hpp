@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:23:49 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/18 19:06:12 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/19 10:01:35 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 #include <iostream>
 #include <string>
 
-#define DEBUG	1
+#define DEBUG	0
 
 typedef	std::string str;
 
 class ClapTrap
 {
-private:
+protected:
 	str		name;
 	int		healthPoints;
 	int		energyPoints;
