@@ -21,7 +21,7 @@ ScavTrap::ScavTrap( void ) : ClapTrap("ScavBot") {
 	this->attackDamage	= 20;
 }
 
-ScavTrap::ScavTrap( str name ) : ClapTrap(name) {
+ScavTrap::ScavTrap( str _name ) : ClapTrap(_name) {
 	if (DEBUG)
 		std::cout << "[ScavTrap Paramiterized Constructor Called]" << std::endl;
 	std::cout << this->name <<  " Robot is assembled." << std::endl;
@@ -30,7 +30,7 @@ ScavTrap::ScavTrap( str name ) : ClapTrap(name) {
 	this->attackDamage	= 20;
 }
 
-ScavTrap::ScavTrap( const ScavTrap& right ) {
+ScavTrap::ScavTrap( const ScavTrap& right ) : ClapTrap(right) {
 	if (DEBUG)
 		std::cout << "[ScavTrap Copy Constructor Called]" << std::endl;
 	*this = right;

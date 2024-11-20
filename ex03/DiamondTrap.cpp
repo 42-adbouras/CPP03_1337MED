@@ -16,11 +16,11 @@ DiamondTrap::DiamondTrap( void ) : ClapTrap("Monster_clap_name"), name("Monster"
 	std::cout << this->name << " is forged." << std::endl;
 }
 
-DiamondTrap::DiamondTrap( str name ) : ClapTrap(name + "_clap_name"), name(name) {
+DiamondTrap::DiamondTrap( str _name ) : ClapTrap(_name + "_clap_name"), name(_name) {
 	std::cout << this->name << " is forged." << std::endl;
 }
 
-DiamondTrap::DiamondTrap( const DiamondTrap& right ) {
+DiamondTrap::DiamondTrap( const DiamondTrap& right ) : ClapTrap(right), FragTrap(right), ScavTrap(right) {
 	*this = right;
 }
 

@@ -20,7 +20,7 @@ FragTrap::FragTrap( void ) : ClapTrap("FragTrap") {
 	this->attackDamage	= 30;
 }
 
-FragTrap::FragTrap( str name ) : ClapTrap(name) {
+FragTrap::FragTrap( str _name ) : ClapTrap(_name) {
 	if (DEBUG)
 		std::cout << "[FragTrap Paramiterized Constructor Called]" << std::endl;
 	std::cout << this->name <<  " is here to save the day." << std::endl;
@@ -29,7 +29,7 @@ FragTrap::FragTrap( str name ) : ClapTrap(name) {
 	this->attackDamage	= 30;
 }
 
-FragTrap::FragTrap( const FragTrap& right ) {
+FragTrap::FragTrap( const FragTrap& right ) : ClapTrap(right) {
 	if (DEBUG)
 		std::cout << "[FragTrap Copy Constructor Called]" << std::endl;
 	*this = right;

@@ -18,7 +18,7 @@ ClapTrap::ClapTrap( void ) : name("NPC"), healthPoints(10), energyPoints(10), at
 	std::cout << this->name << " spawned." << std::endl;
 }
 
-ClapTrap::ClapTrap( str name ) : name(name), healthPoints(10), energyPoints(10), attackDamage(0) {
+ClapTrap::ClapTrap( str _name ) : name(_name), healthPoints(10), energyPoints(10), attackDamage(0) {
 	if (DEBUG)
 		std::cout << "[ClapTrap Parameterized Constructor Called]" << std::endl;
 	std::cout << this->name << " spawned." << std::endl;
