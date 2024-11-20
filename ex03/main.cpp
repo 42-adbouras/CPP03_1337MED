@@ -6,15 +6,15 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:49:47 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/19 13:37:26 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/20 16:03:10 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/FragTrap.hpp"
+#include "./includes/DiamondTrap.hpp"
 
 int	main( void ) {
 
-	FragTrap	a("Frag");
-	a.attack("him");
-	a.highFiveGuys();
+	DiamondTrap a("Godzilla");
+	a.attack("evaluator");
+	a.whoAmI();
 }

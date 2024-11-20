@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 09:47:46 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/20 11:01:33 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/20 16:20:29 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ public:
 
 	DiamondTrap&	operator=( const DiamondTrap& right );
 
+	void			attack(const std::string &target);
 	void			whoAmI( void );
 };

@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 17:43:43 by adbouras          #+#    #+#              #
-#    Updated: 2024/11/20 09:46:01 by adbouras         ###   ########.fr        #
+#    Updated: 2024/11/20 16:26:49 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,11 @@ CLN		= \033[K\r\c
 
 CC		= c++
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CFLAGS	= -Wall -Wextra -Werror -Wshadow -std=c++98
 
 NAME	= diamondTrap
 
-SRC		= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
+SRC		= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 NCLD	= 
 
