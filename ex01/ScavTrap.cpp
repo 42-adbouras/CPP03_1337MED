@@ -30,7 +30,7 @@ ScavTrap::ScavTrap( str name ) : ClapTrap(name) {
 	this->attackDamage	= 20;
 }
 
-ScavTrap::ScavTrap( const ScavTrap& right ) {
+ScavTrap::ScavTrap( const ScavTrap& right ) : ClapTrap(right) {
 	if (DEBUG)
 		std::cout << "[ScavTrap Copy Constructor Called]" << std::endl;
 	*this = right;
