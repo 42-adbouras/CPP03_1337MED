@@ -6,15 +6,17 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 12:06:48 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/20 09:44:27 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/23 19:29:20 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/FragTrap.hpp"
 
-FragTrap::FragTrap( void ) : ClapTrap("FragTrap") {
+FragTrap::FragTrap( void ) : ClapTrap("DinDjarin") {
 	if (DEBUG)
 		std::cout << "[FragTrap Default Constructor Called]" << std::endl;
+	else
+		std::cout << this->name <<  " is here to save the day." << std::endl;
 	this->healthPoints	= 100;
 	this->energyPoints	= 100;
 	this->attackDamage	= 30;
@@ -23,7 +25,8 @@ FragTrap::FragTrap( void ) : ClapTrap("FragTrap") {
 FragTrap::FragTrap( str _name ) : ClapTrap(_name) {
 	if (DEBUG)
 		std::cout << "[FragTrap Paramiterized Constructor Called]" << std::endl;
-	std::cout << this->name <<  " is here to save the day." << std::endl;
+	else
+		std::cout << this->name <<  " is here to save the day." << std::endl;
 	this->healthPoints	= 100;
 	this->energyPoints	= 100;
 	this->attackDamage	= 30;
@@ -38,10 +41,13 @@ FragTrap::FragTrap( const FragTrap& right ) : ClapTrap(right) {
 FragTrap::~FragTrap	( void ) {
 	if (DEBUG)
 		std::cout << "[FragTrap Default Destructor Called]" << std::endl;
-	std::cout << this->name << " willing to leave the party!" << std::endl;
+	else
+		std::cout << this->name << " willing to leave the party!" << std::endl;
 }
 
 FragTrap&	FragTrap::operator=( const FragTrap& right ) {
+	if  (DEBUG)
+		std::cout << "[FragTrap Copy Assignment Called]" << std::endl;
 	if (this != &right) {
 		this->name			= right.name;
 		this->healthPoints	= right.healthPoints;
@@ -52,5 +58,5 @@ FragTrap&	FragTrap::operator=( const FragTrap& right ) {
 }
 
 void		FragTrap::highFiveGuys( void ) {
-	std::cout << "✨Here's a virtual high five 🖐️ just for you✨" << std::endl;
+	std::cout << this->name << ": ✨Here's a virtual high five 🖐️ just for you✨" << std::endl;
 }

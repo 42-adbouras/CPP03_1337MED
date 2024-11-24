@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:23:49 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/18 19:06:12 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/22 19:55:21 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 #include <iostream>
 #include <string>
 
-#define DEBUG	1
+#define DEBUG	0
 
 typedef	std::string str;
 
 class ClapTrap
 {
 private:
-	str		name;
-	int		healthPoints;
-	int		energyPoints;
-	int		attackDamage;
+	str			name;
+	int			healthPoints;
+	int			energyPoints;
+	int			attackDamage;
 public:
 	ClapTrap	( void );
 	ClapTrap	( str name );
@@ -37,5 +37,6 @@ public:
 	void		attack( const std::string& target );
 	void		takeDamage( unsigned int amount );
 	void		beRepaired( unsigned int amount );
-};
 
+	void		printStatus( void );
+};

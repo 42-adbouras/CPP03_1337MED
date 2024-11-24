@@ -6,16 +6,18 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:49:47 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/19 11:53:10 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/22 18:55:45 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "./includes/ScavTrap.hpp"
 
 int	main( void ) {
 
-	ScavTrap	a("RD-40");
-	a.attack("Evaluator");
-	a.takeDamage(300);
-	a.takeDamage(300);	
+	ScavTrap	foo("R2-D2");
+
+	foo.takeDamage(20);
+	foo.attack("Storm Trooper");
+	foo.beRepaired(10);
+	foo.printStatus();
 }

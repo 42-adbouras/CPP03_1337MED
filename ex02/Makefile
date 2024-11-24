@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 17:43:43 by adbouras          #+#    #+#              #
-#    Updated: 2024/11/19 13:35:55 by adbouras         ###   ########.fr        #
+#    Updated: 2024/11/20 18:37:31 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ NAME	= fragTrap
 
 SRC		= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 
-NCLD	= 
+NCLD	= ./includes/ClapTrap.hpp ./includes/FragTrap.hpp ./includes/ScavTrap.hpp
 
 OBJ_DIR = objects/
 

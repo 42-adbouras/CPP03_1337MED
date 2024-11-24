@@ -6,16 +6,17 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:00:52 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/19 13:36:28 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/21 12:47:40 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/ScavTrap.hpp"
 
-ScavTrap::ScavTrap( void ) : ClapTrap("ScavBot") {
+ScavTrap::ScavTrap( void ) : ClapTrap("IG-88") {
 	if (DEBUG)
 		std::cout << "[ScavTrap Default Constructor Called]" << std::endl;
-	std::cout << this->name <<  " Robot is assembled." << std::endl;
+	else
+		std::cout << this->name <<  " Robot is assembled." << std::endl;
 	this->healthPoints	= 100;
 	this->energyPoints	= 50;
 	this->attackDamage	= 20;
@@ -24,7 +25,8 @@ ScavTrap::ScavTrap( void ) : ClapTrap("ScavBot") {
 ScavTrap::ScavTrap( str _name ) : ClapTrap(_name) {
 	if (DEBUG)
 		std::cout << "[ScavTrap Paramiterized Constructor Called]" << std::endl;
-	std::cout << this->name <<  " Robot is assembled." << std::endl;
+	else
+		std::cout << this->name <<  " Robot is assembled." << std::endl;
 	this->healthPoints	= 100;
 	this->energyPoints	= 50;
 	this->attackDamage	= 20;
@@ -39,14 +41,15 @@ ScavTrap::ScavTrap( const ScavTrap& right ) : ClapTrap(right) {
 ScavTrap::~ScavTrap( void ) {
 	if (DEBUG)
 		std::cout << "[ScavTrap Default Destructor Called]" << std::endl;
-	std::cout << this->name << " went lost!" << std::endl;
+	else
+		std::cout << this->name << " went lost!" << std::endl;
 }
 
 ScavTrap&	ScavTrap::operator=( const ScavTrap& right ) {
 	if (DEBUG)
 		std::cout << "[ScavTrap Copy Assignment Called]" << std::endl;
 	if (this != &right) {
-		this->name = right.name;
+		this->name			= right.name;
 		this->healthPoints	= right.healthPoints;
 		this->energyPoints	= right.energyPoints;
 		this->attackDamage	= right.attackDamage;

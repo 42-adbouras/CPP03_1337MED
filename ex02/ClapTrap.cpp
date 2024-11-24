@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:21:34 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/19 13:36:14 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/22 19:52:47 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 ClapTrap::ClapTrap( void ) : name("NPC"), healthPoints(10), energyPoints(10), attackDamage(0) {
 	if (DEBUG)
 		std::cout << "[ClapTrap Default Constructor Called]" << std::endl;
-	std::cout << this->name << " spawned." << std::endl;
+	else
+		std::cout << this->name << " spawned." << std::endl;
 }
 
 ClapTrap::ClapTrap( str name ) : name(name), healthPoints(10), energyPoints(10), attackDamage(0) {
 	if (DEBUG)
 		std::cout << "[ClapTrap Parameterized Constructor Called]" << std::endl;
-	std::cout << this->name << " spawned." << std::endl;
+	else
+		std::cout << this->name << " spawned." << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& right ) {
@@ -33,7 +35,8 @@ ClapTrap::ClapTrap( const ClapTrap& right ) {
 ClapTrap::~ClapTrap	( void ) {
 	if (DEBUG)
 		std::cout << "[ClapTrap Default Destructor Called]" << std::endl;
-	std::cout << this->name << " out of sight!" << std::endl;
+	else
+		std::cout << this->name << " out of sight!" << std::endl;
 }
 
 ClapTrap&	ClapTrap::operator=( const ClapTrap& right ) {
@@ -71,4 +74,12 @@ void	ClapTrap::beRepaired( unsigned int amount ) {
 		this->healthPoints += amount; --(this->energyPoints);
 	} else
 		std::cout << this->name << " run out of energy!" << std::endl;
+}
+
+void	ClapTrap::printStatus( void ) {
+	std::cout << this->name 
+	<< " => heathPoints: " << this->healthPoints
+	<< ", energyPoints: " << this->energyPoints
+	<< ", attackDamage: " << this->attackDamage
+	<< std::endl;
 }

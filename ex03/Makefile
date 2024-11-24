@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 17:43:43 by adbouras          #+#    #+#              #
-#    Updated: 2024/11/20 16:26:49 by adbouras         ###   ########.fr        #
+#    Updated: 2024/11/20 18:36:43 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ NAME	= diamondTrap
 
 SRC		= ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
-NCLD	= 
+NCLD	= ./includes/ClapTrap.hpp ./includes/DiamondTrap.hpp ./includes/FragTrap.hpp ./includes/ScavTrap.hpp
 
 OBJ_DIR = objects/
 

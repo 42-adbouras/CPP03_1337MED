@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:49:47 by adbouras          #+#    #+#             */
-/*   Updated: 2024/11/20 16:03:10 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/11/24 08:52:27 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,11 @@
 
 int	main( void ) {
 
-	DiamondTrap a("Godzilla");
-	a.attack("evaluator");
-	a.whoAmI();
+	DiamondTrap	foo("Godzilla");
+
+	foo.printStatus();
+	foo.guardGate();
+	foo.attack("KingGong");
+	foo.highFiveGuys();
+	foo.printStatus();
 }
