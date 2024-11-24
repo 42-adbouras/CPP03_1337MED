@@ -19,7 +19,7 @@ CLN		= \033[K\r\c
 
 CC		= c++
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -Wshadow
 
 NAME	= fragTrap
 

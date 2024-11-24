@@ -22,7 +22,7 @@ ScavTrap::ScavTrap( void ) : ClapTrap("IG-88") {
 	this->attackDamage	= 20;
 }
 
-ScavTrap::ScavTrap( str name ) : ClapTrap(name) {
+ScavTrap::ScavTrap( str _name ) : ClapTrap(_name) {
 	if (DEBUG)
 		std::cout << "[ScavTrap Default Constructor Called]" << std::endl;
 	else
